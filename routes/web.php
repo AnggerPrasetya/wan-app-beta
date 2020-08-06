@@ -26,6 +26,7 @@ Route::group(['prefix' => 'dashboard', 'middleware' => ['auth', 'access']], func
     Route::get('/homes/index', 'Dashboard\HomeController@index');
     Route::get('/settings/profile/', 'Dashboard\SettingController@profile');
     Route::put('/settings/profile/{id}', 'Dashboard\SettingController@updateprofile');
+    Route::resource('/settings/general', 'Dashboard\GeneralController');
     Route::resource('/managements/menu', 'Dashboard\MenuController');
     Route::resource('/managements/submenu', 'Dashboard\SubmenuController');
     Route::resource('/managements/role', 'Dashboard\RolemenuController');

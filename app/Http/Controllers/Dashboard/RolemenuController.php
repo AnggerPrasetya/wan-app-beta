@@ -20,7 +20,7 @@ class RolemenuController extends Controller
      */
     public function index()
     {
-        $role = Role::whereNotIn('id', [1])->get();
+        $role = Role::all();
         return view('dashboard.role.roles', compact('role'));
     }
 
